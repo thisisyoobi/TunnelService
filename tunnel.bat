@@ -7,11 +7,11 @@ set Server=root@example.com
 set ServerPort=22
 
 rem RDP port forwarding
-set Forwards=-R 0.0.0.0:3389:127.0.0.1:3389
+set Forwards=-R 3389:127.0.0.1:3389
 
 rem Other custom port forwarding
-set Forwards=%Forwards% -R 0.0.0.0:8080:127.0.0.1:8080
-set Forwards=%Forwards% -R 0.0.0.0:12443:127.0.0.1:12443
+rem set Forwards=%Forwards% -R 0.0.0.0:8080:127.0.0.1:8080
+rem set Forwards=%Forwards% -R 0.0.0.0:12443:127.0.0.1:12443
 
 :Reconnect
 echo %date% %time% Connect to %Server%:%ServerPort% ...
