@@ -10,6 +10,7 @@ if not %errorlevel% == 0 (
 ) else (
    echo Set key files permission...
    icacls %key% /c /t /grant System:F
+   icacls %key% /c /t /remove:g Administrators %USERNAME%
    icacls %key% /c /t /setowner System
    icacls %key% /c /t /inheritance:r
    bin\nssm install BSTunnel "%cd%\tunnel.bat"
